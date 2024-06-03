@@ -23,7 +23,7 @@ window.onload = function() {
     '},' +
     '{' +
         '"id":"3",' +
-        '"name":"Romano Margherita",' + 
+        '"name":"Margherita",' + 
         '"price":"3.00", ' + 
         '"imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_umLukzwSubm8kVzmq94b58qmHGWbaWFfFjeU90VjJg&s", ' +
         '"description":"A pizza with 4 different types of vegiterian toppings.",' +
