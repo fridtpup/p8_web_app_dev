@@ -1,0 +1,75 @@
+
+body {
+    background-color: #2e2e2e;
+}
+
+.pizzaInfo {
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: solid white 2px;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: fit-content;
+    border-bottom: solid white 2px;
+}
+.topContainer {
+    width: 100%;
+}
+
+.orderForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 10px;
+}
+
+.orderForm form {
+    width: 60%;
+    background-color: #4e4e4e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formrow {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formrow input {
+    height: 25px;
+}
+
+.orderBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid black 2px;
+    display: flex;
+    margin-top: 40px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+}
+
+.orderBtn:hover {
+    cursor: pointer;
+    background-color: grey;
+}

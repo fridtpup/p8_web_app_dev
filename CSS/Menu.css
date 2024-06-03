@@ -1,0 +1,17 @@
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 90%;
+    margin: 10px 0 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,8 @@
 {
-  "name": "Pizza app",
-  "short_name": "Pizza app",
-  "theme_color": "#AB0000",
-  "background_color": "#AB0000",
+  "name": "CodeCrust Pizzeria",
+  "short_name": "CodeCrust ",
+  "theme_color": "#E74C3C",
+  "background_color": "#2C3E50",
   "display": "browser",
   "orientation": "portrait",
   "scope": "/",

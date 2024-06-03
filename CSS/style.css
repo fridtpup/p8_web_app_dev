@@ -1,17 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #2e2e2e;
 }
 
-html:root {
-    --mdc-theme-primary: rgb(171, 0, 0);
+/* Homepage CSS */
+.pizzaInfo {
+    margin: 5px 0;
 }
 
-.logoContainer {
-    display: flex;
-    justify-content: center;
+.pizzaName, .pizzaPrice {
+    text-align: center;
+    width: 100%;
 }
-.logo {
+
+/* Image list CSS styling */
+.mdc-image-list--masonry {
+    column-count: 2;
+    margin-top: 30px;
+}
+
+.mdc-image-list__item {
+    cursor: pointer;
+    border: 2px solid rgb(80, 80, 80);
+    background-color: #5d5d5d;
+    margin: 0 10px 15px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.mdc-image-list__item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid white;
+}
+
+
+/* Sheet CSS styling */
+
+.btn {
     width: 90%;
-    margin: 10px 0 20px;
+    margin-bottom: 15px;
+}
+
+.btn button {
+    width: 100%;
+}
+
+.mdc-button__label {
+    color: white;
+    text-decoration: none;
+}
+
+.pizzaInfoSheet {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    margin-left: 0;
+    background-color: #2e2e2e;
+    transition: 0.4s ease;
+}
+
+.pizzaInfoSheet main {
+    color: white;
+    font-size: 20px;
+    height: calc(100% - 56px - 51px);
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.priceTxt {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pizzaInfoSheet img {
+    width: 100%;
+    height: auto;
+}
+
+.lists {
+    display: flex;
+}
+
+.listContainer {
+    width: 50%;
+}
+
+.ingredientsHeader {
+    margin-left: 10px;    
+}
+
+.ingredients, .allergies {
+    margin-left: 30px;
+    font-size: 16px;
+    list-style-type: "- ";
+}
+
+.sheet-out-of-view {
+    margin-left: -100%;
+}
+
+.order:hover {
+    color: #b62e1f;
 }
