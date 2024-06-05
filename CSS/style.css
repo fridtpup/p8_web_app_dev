@@ -105,3 +105,39 @@ body {
 .order:hover {
     color: #b62e1f;
 }
+
+/* seearch bar */
+.searchBar {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 56px;
+    background-color: #2e2e2e;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.row {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#query {
+    width: 70%;
+}
+
+#searchBtn {
+    width: 20%;
+    background-color: #E74C3C;
+    color: white;
+} 
+
+#query, #searchBtn {
+    border-radius: 10px;
+    height: 30px;
+}

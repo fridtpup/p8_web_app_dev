@@ -59,7 +59,7 @@ window.onload = function() {
 
         const pizzaPrice = document.createElement("p");
         pizzaPrice.className = "pizzaPrice";
-        pizzaPrice.textContent = `Prijs: ${pizza.price}`;
+        pizzaPrice.textContent = `Prijs: €${pizza.price}`;
 
         // Add components to list
         imageList.appendChild(pizzaObj);
@@ -70,7 +70,14 @@ window.onload = function() {
     });
 
 
-    // Filtering tabs.
+
+    // Objects for menu drawer function.
+    const mainContentEl = document.querySelector('.main-content');
+    const menuBtn = document.querySelector('#menu');
+    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const listEl = document.querySelector('.mdc-drawer .mdc-list');
+
+
     // Objects for the filtering function.
     const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
     const homeBtn = document.querySelector('.mdc-top-app-bar__title');
@@ -79,8 +86,41 @@ window.onload = function() {
     const buttons = document.querySelectorAll('.mdc-tab');
     const listItems = document.querySelectorAll('.mdc-image-list__item');
 
+
+    // Objects for the sheets
+    const close = document.querySelector('#close');
+    const sheet = document.querySelector('.pizzaInfoSheet');
+
+
+    // Objects for search function
+    const searchBarOpenBtn = document.querySelector('#search');
+    const searchBar = document.querySelector('.searchBar');
+    const queryBar = document.querySelector('#query');
+    const searchBtn = document.querySelector('#searchBtn');
+    let barOpen = false;
+    
+
+
+
+    // Menu drawer function.
+    menuBtn.addEventListener('click', () => {
+        drawer.open = true;
+        searchBar.style.display = 'none';
+    })
+
+    listEl.addEventListener('click', (event) => {
+        drawer.open = false;
+    });
+
+    document.body.addEventListener('MDCDrawer:closed', () => {
+    mainContentEl.querySelector('input, button').focus();
+    }); 
+
+
+    // Filtering tabs function.
     // Upon clicking home button set the active tab to all pizza's.
     homeBtn.addEventListener('click', () => {
+        searchBar.style.display = 'none';
         // Removes active state on all tabs and adds it back on the 'all' tab.
         tabs.forEach(tab => {
             tab.classList.remove('mdc-tab-indicator--active');
@@ -115,10 +155,40 @@ window.onload = function() {
     });
 
 
+
+    // Search function.
+    // Opens search bar when search icon is clicked
+    searchBarOpenBtn.addEventListener('click', () => {
+        if(!barOpen) searchBar.style.display = 'flex'
+        else searchBar.style.display = 'none'
+        barOpen = !barOpen
+    })
+
+    // When search button within the search bar is clicked, search for pizzas containing the string contentwithing the search query 
+    // as long as the query is 3 or more characters long.
+    searchBtn.addEventListener('click', () => {
+        let query = queryBar.value.toLowerCase();
+
+        if (query.length > 2) {
+            listItems.forEach(item => {
+                let pizzaName = item.querySelector('.pizzaName').textContent.toLowerCase();
+
+                item.classList.add('hidden');
+    
+                if (pizzaName.includes(query)) {
+                    item.classList.remove('hidden');
+                }
+            })
+        }
+    })
+
+
+
+
+
     // Sheet popup
     // Objects for the sheet display and function.
-    const close = document.querySelector('#close');
-    const sheet = document.querySelector('.pizzaInfoSheet');
+   
 
     // Upon clicking an item in the image list, get and show the clicked pizza and its info.
     
@@ -192,10 +262,22 @@ window.onload = function() {
     
     // Close/open sheet.
     function sheetOpen() {
+        searchBar.style.display = 'none';
         sheet.classList.remove('sheet-out-of-view');
     }
     
     function sheetClose() {
         sheet.classList.toggle('sheet-out-of-view');
     }
+
+
+
+    
+
+
+
+    
+
+
+
 }

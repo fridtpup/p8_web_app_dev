@@ -62,11 +62,24 @@
         <span class="mdc-top-app-bar__title">Codecrust Pizzeria</span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" id="search" aria-label="Search">search</button>
         <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
       </section>
     </div>
   </header>
+
+
+
+  <!-- Search bar -->
+  <div class="searchBar">
+    <div class="row">
+      <input type="text" name="query" id="query">
+      <button id="searchBtn">Search</button>
+    </div>
+  </div>
+
+
+
   <!-- Menu drawer -->
   <aside class="mdc-drawer mdc-drawer--modal">
     <div class="mdc-drawer__content">
@@ -94,6 +107,8 @@
   </aside>
   <div class="mdc-drawer-scrim"></div>
   
+
+
   <!-- Main content -->
   <main class="mdc-top-app-bar--fixed-adjust">
   <!-- Filter tabs -->
@@ -139,6 +154,8 @@
       <!-- Javascript adds pizza info here -->
     </ul>
   </main>
+
+
 
   <!-- Pizza info sheet -->
   <section class="pizzaInfoSheet sheet-out-of-view">
@@ -187,6 +204,7 @@
   </section>
 </body>
 
-<script src="../JS/MenuDrawer.js"></script>
 <script src="../JS/Pizza.js"></script>
+<script src="../JS/MenuDrawer.js"></script>
+
 </html>
