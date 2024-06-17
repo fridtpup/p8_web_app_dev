@@ -79,7 +79,9 @@
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="menu" aria-label="Open navigation menu">menu</button>
-          <span class="mdc-top-app-bar__title">Codecrust Pizzeria</span>
+          <a href="index.html">
+            <span class="mdc-top-app-bar__title">Codecrust Pizzeria</span>
+          </a>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
           <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
