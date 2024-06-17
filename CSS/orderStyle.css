@@ -73,3 +73,9 @@ img {
     cursor: pointer;
     background-color: grey;
 }
+
+
+.home {
+    text-decoration: none;
+    color: white;
+}
