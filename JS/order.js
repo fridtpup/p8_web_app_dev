@@ -1,3 +1,8 @@
+class OrderFunc 
+{
+    
+}
+
 const pizzaImg = document.querySelector('.pizzaimg');
 const nameTxt = document.querySelector('.name');
 const priceTxt = document.querySelector('.price');

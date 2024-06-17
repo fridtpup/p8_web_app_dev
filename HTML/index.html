@@ -2,60 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dit is een app voor een overzicht van de pizza's bij CodeCrust Pizzeria.">
-  <meta name="msapplication-TileColor" content="#AB0000">
-  <meta name="theme-color" content="#AB0000">
-  <link rel="icon" type="image/png" sizes="32x32", href="../images/icons/icon-512x512.png">
-  <link rel="manifest" href="manifest.json">
-
-  <title>CodeCrust Pizzeria</title>
-  <!-- CSS for material classes and google icons -->
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <head>
+    <!-- meta/manifest tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dit is een app voor een overzicht van de pizza's bij Codecrust's.">
+    <meta name="msapplication-TileColor" content="#AB0000">
+    <meta name="theme-color" content="#AB0000">
+    <link rel="icon" type="image/png" sizes="32x32", href="../images/icons/icon-512x512.png">
+    <link rel="manifest" href="manifest.json">
   
-  <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="../CSS/Menu.css">
-  <link rel="stylesheet" href="../CSS/shared.css">
-  <!-- Scripts for material javascript objects -->
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <script>
-      const MDCBanner = mdc.banner.MDCBanner;
-      const MDCCheckbox = mdc.checkbox.MDCCheckbox;
-      const MDCChip = mdc.chips.MDCChip;
-      const MDCChipSet = mdc.chips.MDCChipSet;
-      const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress;
-      const MDCDataTable = mdc.dataTable.MDCDataTable;
-      const MDCDialog = mdc.dialog.MDCDialog;
-      const MDCDrawer = mdc.drawer.MDCDrawer;
-      const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel;
-      const MDCFormField = mdc.formField.MDCFormField;
-      const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle;
-      const MDCLineRipple = mdc.lineRipple.MDCLineRipple;
-      const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress;
-      const MDCList = mdc.list.MDCList;
-      const MDCMenu = mdc.menu.MDCMenu;
-      const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface;
-      const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline;
-      const MDCRadio = mdc.radio.MDCRadio;
-      const MDCRipple = mdc.ripple.MDCRipple;
-      const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton;
-      const MDCSelect = mdc.select.MDCSelect;
-      const MDCSlider = mdc.slider.MDCSlider;
-      const MDCSnackbar = mdc.snackbar.MDCSnackbar;
-      const MDCSwitch = mdc.switchControl.MDCSwitch;
-      const MDCTabBar = mdc.tabBar.MDCTabBar;
-      const MDCTextField = mdc.textField.MDCTextField;
-      const MDCTooltip = mdc.tooltip.MDCTooltip;
-      const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
+    <title>Codecrust Pizzeria</title>
+  
+    <!-- CSS for material classes and google icons -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- CSS for specific site -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/shared.css">
+  
+    <!-- Scripts for material javascript objects -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+        const MDCBanner = mdc.banner.MDCBanner;
+        const MDCCheckbox = mdc.checkbox.MDCCheckbox;
+        const MDCChip = mdc.chips.MDCChip;
+        const MDCChipSet = mdc.chips.MDCChipSet;
+        const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress;
+        const MDCDataTable = mdc.dataTable.MDCDataTable;
+        const MDCDialog = mdc.dialog.MDCDialog;
+        const MDCDrawer = mdc.drawer.MDCDrawer;
+        const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel;
+        const MDCFormField = mdc.formField.MDCFormField;
+        const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle;
+        const MDCLineRipple = mdc.lineRipple.MDCLineRipple;
+        const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress;
+        const MDCList = mdc.list.MDCList;
+        const MDCMenu = mdc.menu.MDCMenu;
+        const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface;
+        const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline;
+        const MDCRadio = mdc.radio.MDCRadio;
+        const MDCRipple = mdc.ripple.MDCRipple;
+        const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton;
+        const MDCSelect = mdc.select.MDCSelect;
+        const MDCSlider = mdc.slider.MDCSlider;
+        const MDCSnackbar = mdc.snackbar.MDCSnackbar;
+        const MDCSwitch = mdc.switchControl.MDCSwitch;
+        const MDCTabBar = mdc.tabBar.MDCTabBar;
+        const MDCTextField = mdc.textField.MDCTextField;
+        const MDCTooltip = mdc.tooltip.MDCTooltip;
+        const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
+    </script>
+  
+    <!-- Service worker -->
+    <script>
+      window.addEventListener("load", () => {
+          if ("serviceWorker" in navigator) {
+              navigator.serviceWorker.register("service-worker.js");
+          }
+      });
   </script>
-  <script>
-    window.addEventListener("load", () => {
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("service-worker.js");
-        }
-    });
-</script>
 </head>
 
 
