@@ -242,7 +242,7 @@ window.onload = function() {
     
             
             // Set link to order page using collected parameters.
-            document.querySelector(".orderRef").href = `order.html?imageUrl=${imgUrl}&name=${pizzaName}&price=${pizzaPrice}`;
+            document.querySelector(".orderRef").href = `order.php?imageUrl=${imgUrl}&name=${pizzaName}&price=${pizzaPrice}`;
     
             // Styling for the sheet
             sheet.style.top = `${window.pageYOffset}px`;

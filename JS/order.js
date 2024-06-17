@@ -12,3 +12,6 @@ pizzaImg.src = imgUrl;
 nameTxt.textContent = name + " pizza";
 priceTxt.textContent = "Price: €" + price;
 
+const pizzaType = document.getElementById('pizza');
+pizzaType.value = name;
+

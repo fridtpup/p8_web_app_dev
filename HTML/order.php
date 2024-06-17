@@ -1,3 +1,12 @@
+<?php
+  include ('../PHP/defines.php');
+  include ('../PHP/orderFunc.php');
+
+  $orderFunc = new orderFunc();
+
+  $orderFunc->sendOrder()
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +75,6 @@
           <span class="mdc-top-app-bar__title">Codecrust Pizzeria</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
-          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
           <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
         </section>
       </div>
@@ -106,23 +113,22 @@
             <p class="price"></p>
           </div>
           <div class="orderForm">
-            <form action="#">
+            <form action="#" method="POST">
+              <input type="hidden" name="pizza" id="pizza">
               <div class="formrow">
                 <label for="name">Name</label>
-                <input type="text" required>
+                <input type="text" name="name" required>
               </div>
               <div class="formrow">
-                <label for="name">Adress</label>
-                <input type="text" required>
+                <label for="address">Address</label>
+                <input type="text" name="address" required>
               </div>
               <div class="formrow">
-                <label for="name">Phone</label>
-                <input type="text" required>
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" required>
               </div>
               <div class="submit">
-                <a class="orderBtn" href="confirmation.html">
-                  Order
-                </a>
+                <input class="orderBtn" name="order" type="submit" value="Order">
               </div>
             </form>
           </div>
