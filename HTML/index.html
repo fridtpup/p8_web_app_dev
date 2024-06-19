@@ -58,10 +58,12 @@
   
     <!-- Service worker -->
     <script>
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('pwabuilder-sw.js')
-      }
-    </script>
+      window.addEventListener("load", () => {
+          if ("serviceWorker" in navigator) {
+              navigator.serviceWorker.register("service-worker.js");
+          }
+      });
+  </script>
 </head>
 
 

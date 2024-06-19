@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 500px;
 }
 
 body {
@@ -17,9 +16,4 @@ html:root {
 
 .hidden {
     display: none;
-}
-
-.home {
-    text-decoration: none;
-    color: white;
 }

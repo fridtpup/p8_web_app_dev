@@ -1,38 +1,112 @@
 // Pizza json
-let text = '{ "Result" : [' +
-'{' +
-    '"id":"1",' +
-    '"name":"Pepperoni",' + 
-    '"price":"17.50", ' + 
-    '"imgUrl":"https://www.dominos.com.sg/ManagedAssets/SG/product/PXPP/SG_PXPP_en_hero_11915.jpg?v-1996905873", ' +
-    '"description":"A pizza with 4 different types of vegiterian toppings.",' +
-    '"allergies":["soy", "milk", "gluten"],' +
-    '"ingredients":["tomato sauce", "mozzarella", "pepperoni"],'+
-    '"type":"non-vegan"' +
-'},' +
-'{' +
-    '"id":"2",' +
-    '"name":"Quattro Veggi",' + 
-    '"price":"15.50", ' + 
-    '"imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTWWxSErcILUQ_8gCCaFV2pndAwFqxM4_BBypkyWiMlQ&s", ' +
-    '"description":"A pizza with 4 different types of vegiterian toppings.",' +
-    '"allergies":["soy", "milk", "gluten"],' +
-    '"ingredients":["olives", "cherry tomatoes", "mushrooms", "green pepper", "pineapple"],'+
-    '"type":"vegan"' +
-'},' +
-'{' +
-    '"id":"3",' +
-    '"name":"Margherita",' + 
-    '"price":"3.00", ' + 
-    '"imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_umLukzwSubm8kVzmq94b58qmHGWbaWFfFjeU90VjJg&s", ' +
-    '"description":"A pizza with 4 different types of vegiterian toppings.",' +
-    '"allergies":["soy", "milk", "gluten"],' +
-    '"ingredients":["feta cheese", "cherry tomatoes", "olives", "napolitana sauce"],'+
-    '"type":"vegan"' +
-'}]}'; 
+const pizzaData = `{
+    "Result": [
+        {
+            "id": "1",
+            "name": "Pepperoni",
+            "price": "17.50",
+            "imgUrl": "https://www.dominos.com.sg/ManagedAssets/SG/product/PXPP/SG_PXPP_en_hero_11915.jpg?v-1996905873",
+            "description": "A pizza with 4 different types of vegetarian toppings.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["tomato sauce", "mozzarella", "pepperoni"],
+            "type": "non-vegan"
+        },
+        {
+            "id": "2",
+            "name": "Quattro Veggi",
+            "price": "15.50",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTWWxSErcILUQ_8gCCaFV2pndAwFqxM4_BBypkyWiMlQ&s",
+            "description": "A pizza with 4 different types of vegetarian toppings.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["olives", "cherry tomatoes", "mushrooms", "green pepper", "pineapple"],
+            "type": "vegan"
+        },
+        {
+            "id": "3",
+            "name": "Margherita",
+            "price": "3.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_umLukzwSubm8kVzmq94b58qmHGWbaWFfFjeU90VjJg&s",
+            "description": "A pizza with 4 different types of vegetarian toppings.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["feta cheese", "cherry tomatoes", "olives", "napolitana sauce"],
+            "type": "vegan"
+        },
+        {
+            "id": "4",
+            "name": "BBQ Chicken",
+            "price": "18.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ315MXgMuqHY_kvvYRcohLvXpemxF4w9YEew&s",
+            "description": "A pizza with BBQ chicken, onions, and mozzarella cheese.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["BBQ sauce", "chicken", "onions", "mozzarella"],
+            "type": "non-vegan"
+        },
+        {
+            "id": "5",
+            "name": "Hawaiian",
+            "price": "16.50",
+            "imgUrl": "https://www.dominos.com.sg/ManagedAssets/SG/product/PXHW/SG_PXHW_en_hero_11915.jpg?v-1996905873",
+            "description": "A pizza with ham and pineapple.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["tomato sauce", "ham", "pineapple", "mozzarella"],
+            "type": "non-vegan"
+        },
+        {
+            "id": "6",
+            "name": "Mexican Fiesta",
+            "price": "19.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJbAzfeCcxPOl5U04eB-rwT9gpxauWoSdWA&s",
+            "description": "A spicy pizza with jalapenos, onions, and beef.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["tomato sauce", "jalapenos", "onions", "beef", "mozzarella"],
+            "type": "non-vegan"
+        },
+        {
+            "id": "7",
+            "name": "Truffle Mushroom",
+            "price": "21.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4y9FWkOXLgNQbBIxYPVARTOh_6mwbcXOP-w&s",
+            "description": "A gourmet pizza with truffle oil and mushrooms.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["truffle oil", "mushrooms", "mozzarella", "parmesan"],
+            "type": "vegetarian"
+        },
+        {
+            "id": "8",
+            "name": "Spicy Veg Supreme",
+            "price": "14.50",
+            "imgUrl": "https://www.dominos.com.au/ManagedAssets/AU/product/P454DA/AU_P454DA_en_hero_10451.png?v-873663668",
+            "description": "A pizza with a spicy kick and lots of vegetables.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["tomato sauce", "jalapenos", "green peppers", "onions", "black olives", "mozzarella"],
+            "type": "vegan"
+        },
+        {
+            "id": "9",
+            "name": "Seafood Delight",
+            "price": "22.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPVqj_CEZPT5sk31cWUDp-T8h4Ua5gWsCkKg&s",
+            "description": "A pizza with a mix of seafood toppings.",
+            "allergies": ["soy", "milk", "gluten", "shellfish"],
+            "ingredients": ["tomato sauce", "shrimp", "squid", "mussels", "mozzarella"],
+            "type": "non-vegan"
+        },
+        {
+            "id": "10",
+            "name": "Four Cheese",
+            "price": "20.00",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXiNG4aX2RkKT4lFg60jg96bfGp8KKZsCzg&s",
+            "description": "A pizza with four different types of cheese.",
+            "allergies": ["soy", "milk", "gluten"],
+            "ingredients": ["mozzarella", "cheddar", "parmesan", "blue cheese"],
+            "type": "vegetarian"
+        }
+    ]
+}`;
+
 
 // Get pizza array from JSON object
-const pizzas = JSON.parse(text);
+const pizzas = JSON.parse(pizzaData);
 pizzaArray = pizzas.Result;
 
 // List where pizzas get put into display.
